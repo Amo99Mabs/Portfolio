@@ -1,0 +1,130 @@
+/*General style */
+body {
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    background-color:#FAFAFA;
+}
+body.dark-mode {
+    background-color: #424242; /* Charcoal Black */
+    color: #FAFAFA; /* Light Gray */
+}
+/* Defined color variables */
+:root {
+    --white: #FAFAFA;
+    --light-purple: #EDE7F6;
+    --charcoal-black: #424242;
+    --light-gray: #BDBDBD;
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #EDE7F6; /* Light Purple */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+body.dark-mode .navbar {
+    background-color: #333333; /* Dark Gray */
+}
+.navbar-left .navbar-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #424242; /* Charcoal Black */
+    text-decoration: none;
+}
+body.dark-mode .navbar-left .navbar-name {
+    color: #FAFAFA; /* Light Gray */
+}
+.navbar-left .navbar-name:hover {
+    color: #BDBDBD; /* Light Gray */
+}
+
+.navbar-right a {
+    color: #424242; /* Charcoal Black */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+body.dark-mode .navbar-right a {
+    color: #FAFAFA; /* Light Gray */
+    }
+
+.navbar-right a:hover {
+    background-color: #BDBDBD; /* Light Gray */
+    color: #424242; /* Charcoal Black */
+}
+body.dark-mode .navbar-right .material-icons {
+    color: #FAFAFA; /* Light Gray */
+}
+
+/* Toggle Icon */
+.toggle-icon {
+    cursor: pointer;
+}
+/*Added some padding to the body for the content to still be visible under the fixed navbar*/
+body {
+    padding-top: 50px; /* Adjust this value if your navbar height changes */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #FAFAFA; /* Light Purple */
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 50px; /* Adjust to ensure it doesn't overlap with the navbar */
+}
+body.dark-mode .hero {
+    background-color: #333333; /* Dark Gray */}
+
+
+.hero h1 {
+    font-size: 50px;
+    color: #424242; /* Charcoal Black */
+    margin-bottom: 20px;
+}
+body.dark-mode .hero h1 {
+    color: #FAFAFA; /* Light Gray */}
+
+    .hero img.hero-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.hero p.hero-bio {
+    font-size: 18px;
+    color: #424242; /* Charcoal Black */
+    line-height: 1.6;
+}
+body.dark-mode .hero p.hero-bio {
+    color: #FAFAFA; /* Light Gray */
+}
+.connect-button {
+    background-color: #424242; /* Charcoal Black */
+    color: #FAFAFA; /* Light Gray */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.connect-button:hover {
+    background-color: #BDBDBD; /* Light Gray */
+    color: #424242; /* Charcoal Black */
+}
+body.dark-mode .connect-button {
+    background-color: #FAFAFA; /* Light Gray */
+    color: #424242; /* Charcoal Black */}
+    body.dark-mode .connect-button:hover {
+    background-color: #BDBDBD; /* Light Gray */
+    color: #FAFAFA; /* Light Gray */}
