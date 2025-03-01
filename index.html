@@ -11,9 +11,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <!-- Google icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <title>Amogelang Mabonela | Full stack developer</title>
 </head>
 <body>
+
     <!-- Hero section -->
      <div class="hero">
 <!-- Navbar -->
@@ -22,6 +26,7 @@
             
             <a href="#about" class="navbar-name">Amogelang Mabonela</a>
         </div>
+         <span class="material-icons toggle-icon" id="theme-toggle">brightness_4</span>
         <div class="navbar-right">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -30,16 +35,88 @@
             <a href="#contact">Contact</a>
         </div>
    </div>
-    <!-- Hero section-->
-   
 
+
+    <!-- Hero section-->
     <div class="hero">
         <h1>Full Stack Developer</h1>
+         <div class="moon-crescent-hero"></div>
         <img src="Gallery/20241215_074048.jpg" alt="Amogelang Mabonela" class="hero-image">
         <p class="hero-bio">Hello! I’m an aspiring full-stack developer with hands-on experience in JavaScript, React, Node.js, and MongoDB. My passion lies in creating dynamic and responsive web applications that provide a seamless user experience from front to back.</p>
     <button class="connect-button">Let's Connect</button>
 
-            <span class="material-icons toggle-icon" id="theme-toggle">brightness_4</span>
+
+    <!-- JavaScript -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? 'brightness_high' : 'brightness_4';
+        });
+    </script>
+
+<!-- About section -->
+    <div class="about" id="about">
+         <div class="moon-crescent-about"></div>
+        <img src="Gallery/IMG_0111.JPG" alt="Amogelang Mabonela" class="about-image">
+        <div class="about-text">
+            <p>Hello! I’m Amogelang Mabonela, an aspiring full-stack developer with hands-on experience in JavaScript, React, Node.js, and MongoDB. My passion lies in creating dynamic and responsive web applications that provide a seamless user experience from front to back.</p>
+            <p>I have a background in software development and a keen interest in learning new technologies. I enjoy collaborating with teams to build innovative solutions and am constantly seeking opportunities to grow and expand my skill set.</p>
+            <p>When I'm not coding, I love exploring new places, reading tech blogs, and working on personal projects. I'm excited to connect with like-minded individuals and contribute to impactful projects.</p>
+        </div>
+    </div>
+    <!-- Skills Section -->
+<div class="skills">
+    <h1>Skills</h1>
+    <div class="skills-container">
+        <div class="skill-category">
+            <h2>Languages</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h2>Technologies</h2>
+            <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Express.js</li>
+                <li>Git & GitHub</li>
+                <li>RESTful APIs</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio section -->
+    <div class="portfolio" id="portfolio">
+        <h1>Portfolio</h1>
+        <p>Here are some of the projects I've worked on:</p>
+        <!-- Add your project details here -->
+    </div>
+<!-- Contact section -->
+  <!-- Contact Section -->
+<div class="contact">
+    <h1>Contact</h1>
+    <div class="contact-icons">
+        <a href="mailto:mabonelaa@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="tel:+27604168227"><i class="fas fa-phone"></i></a>
+    </div>
+</div>
+
+
+
+    
 </div>
 </body>
 </html>

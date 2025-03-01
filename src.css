@@ -22,16 +22,18 @@ body.dark-mode {
     overflow: hidden;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     z-index: 1000; /* Ensures the navbar stays on top */
 }
 body.dark-mode .navbar {
     background-color: #333333; /* Dark Gray */
 }
+
 .navbar-left .navbar-name {
     font-weight: bold;
     font-size: 18px;
@@ -43,6 +45,24 @@ body.dark-mode .navbar-left .navbar-name {
 }
 .navbar-left .navbar-name:hover {
     color: #BDBDBD; /* Light Gray */
+}
+
+/* Centered toggle icon */
+.navbar-right {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.toggle-icon {
+    cursor: pointer;
+      color: #424242;
+}
+/* Dark mode for toggle icon */
+body.dark-mode .toggle-icon {
+    color: #FAFAFA; 
+}
+.navbar-left {
+    flex: 1;
 }
 
 .navbar-right a {
@@ -63,10 +83,7 @@ body.dark-mode .navbar-right .material-icons {
     color: #FAFAFA; /* Light Gray */
 }
 
-/* Toggle Icon */
-.toggle-icon {
-    cursor: pointer;
-}
+
 /*Added some padding to the body for the content to still be visible under the fixed navbar*/
 body {
     padding-top: 50px; /* Adjust this value if your navbar height changes */
@@ -76,8 +93,10 @@ body {
 .hero {
     background-color: #FAFAFA; /* Light Purple */
     text-align: center;
-    padding: 100px 20px;
-    margin-top: 50px; /* Adjust to ensure it doesn't overlap with the navbar */
+    padding: 20px 50px 20px;
+    margin-top: 10px; /* Adjust to ensure it doesn't overlap with the navbar */
+    margin-bottom: 40px;
+    position: relative;
 }
 body.dark-mode .hero {
     background-color: #333333; /* Dark Gray */}
@@ -86,6 +105,7 @@ body.dark-mode .hero {
 .hero h1 {
     font-size: 50px;
     color: #424242; /* Charcoal Black */
+    margin-top: 0px;
     margin-bottom: 20px;
 }
 body.dark-mode .hero h1 {
@@ -93,11 +113,21 @@ body.dark-mode .hero h1 {
 
     .hero img.hero-image {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     margin-bottom: 20px;
 }
+ .hero .moon-crescent-hero {
+            width: 170px;
+            height: 170px;
+            background-color: var(--light-purple);
+            border-radius: 50%;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: -1;
+        }
 
 .hero p.hero-bio {
     font-size: 18px;
@@ -128,3 +158,246 @@ body.dark-mode .connect-button {
     body.dark-mode .connect-button:hover {
     background-color: #BDBDBD; /* Light Gray */
     color: #FAFAFA; /* Light Gray */}
+
+.about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: var(--light-purple);
+            text-align: left;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .about img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-right: 80px;
+        }
+         .about .moon-crescent-about {
+            width: 340px;
+            height: 340px;
+            background-color: var(--light-purple);
+            border-radius: 50%;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            z-index: -1;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+
+        .about p {
+            font-size: 1.2em;
+        }
+        /*
+     .about {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 50px;
+            background-color: var(--light-purple);
+        }
+        
+        .about h1 {
+            text-align: top;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .about img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        
+         .about-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+            */
+            /* Skills Section */
+.skills {
+    padding: 50px;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.skills h1 {
+    font-size: 2em;
+    color: var(--charcoal-black);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-category {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 50px;
+    width: 250px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h2 {
+    font-size: 1.5em;
+    color: var(--charcoal-black);
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category li {
+    font-size: 1.2em;
+    color: var(--charcoal-black);
+    margin: 5px 0;
+}
+
+/* Dark Mode for Skills Section */
+body.dark-mode .skills {
+    background-color: var(--charcoal-black);
+}
+
+body.dark-mode .skills h1 {
+    color: var(--white);
+}
+
+body.dark-mode .skill-category {
+    background-color: var(--light-purple);
+}
+
+body.dark-mode .skill-category h2 {
+    color: var(--white);
+}
+
+body.dark-mode .skill-category li {
+    color: var(--white);
+}
+
+         .portfolio, {
+            padding: 100px;
+            background-color: var(--white);
+        }
+
+        .portfolio h1, .contact h1 {
+            font-size: 2em;
+        }
+
+        .portfolio p, .contact p {
+            font-size: 1.2em;
+        }
+
+        .portfolio p, .contact p {
+            margin-bottom: 20px;
+        }
+
+        .dark-mode {
+            background-color: var(--charcoal-black);
+            color: var(--white);
+        }
+         .dark-mode .moon-crescent-hero {
+            background-color: var(--dark-gray);
+        }
+
+        .dark-mode .moon-crescent-about {
+            background-color: var(--dark-purple);
+        }
+        /* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: var(--light-purple);
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px; /* Adjust max-width as needed */
+    position: relative;
+}
+
+.contact h1 {
+    font-size: 2em;
+    color: var(--charcoal-black);
+    margin-bottom: 20px;
+}
+.contact-icons {
+    display: flex;
+    justify-content: space-between; /* Distribute icons evenly */
+    gap: 20px; /* Add some space between the icons */
+    position: absolute; /* Position the icons at the bottom */
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the icons horizontally */
+}
+
+.contact-icons a {
+    background-color: var(--charcoal-black);
+    color: var(--white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.contact-icons a:hover {
+    background-color: var(--light-gray);
+    color: var(--charcoal-black);
+}
+
+
+
+.contact i {
+    margin: auto;
+    font-size: 1.2em;
+    color: var(--white);
+}
+
+.contact a {
+    color: var(--charcoal-black);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--light-gray);
+}
+
+/* Dark Mode for Contact Section */
+body.dark-mode .contact {
+    background-color: var(--charcoal-black);
+}
+
+body.dark-mode .contact h1 {
+    color: var(--white);
+}
+
+body.dark-mode .contact-icons a {
+    background-color: var(--white);
+    color: var(--charcoal-black);
+}
+
+body.dark-mode .contact-icons a:hover {
+    background-color: var(--light-purple);
+    color: var(--white);
+}
