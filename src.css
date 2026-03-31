@@ -401,3 +401,58 @@ body.dark-mode .contact-icons a:hover {
     background-color: var(--light-purple);
     color: var(--white);
 }
+/* Chatbot Section */
+#chatbot {
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#chatbot h2 {
+    font-size: 1.8em;
+    color: var(--charcoal-black);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-log {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--light-gray);
+    padding: 10px;
+    margin-bottom: 10px;
+    background: var(--white);
+    border-radius: 5px;
+}
+
+#user-input {
+    width: 75%;
+    padding: 8px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#send-btn {
+    width: 20%;
+    padding: 8px;
+    background: var(--charcoal-black);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#send-btn:hover {
+    background: var(--light-gray);
+    color: var(--charcoal-black);
+}
