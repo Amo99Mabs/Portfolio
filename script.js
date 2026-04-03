@@ -18,3 +18,28 @@ toggleButton.addEventListener("click", () => {
     ? "brightness_high"
     : "brightness_4";
 });
+// Chatbot functionality
+const sendBtn = document.getElementById("send-btn");
+const userInput = document.getElementById("user-input");
+const chatLog = document.getElementById("chat-log");
+
+if (sendBtn) {
+  sendBtn.addEventListener("click", () => {
+    const input = userInput.value.trim();
+    if (!input) return;
+
+    // Display user message
+    const userMsg = document.createElement("div");
+    userMsg.textContent = "You: " + input;
+    chatLog.appendChild(userMsg);
+
+    // Placeholder bot response
+    const botMsg = document.createElement("div");
+    botMsg.textContent = "Bot: Thanks for asking! I can guide you through Amo’s portfolio highlights.";
+    chatLog.appendChild(botMsg);
+
+    // Clear input
+    userInput.value = "";
+    chatLog.scrollTop = chatLog.scrollHeight; // Auto-scroll
+  });
+}
