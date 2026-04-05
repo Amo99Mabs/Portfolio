@@ -485,3 +485,21 @@ body.dark-mode #send-btn:hover {
     background: var(--light-gray);
     color: var(--charcoal-black);
 }
+#chat-log div {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+#chat-log .user {
+    background-color: var(--light-purple);
+    align-self: flex-end;
+    text-align: right;
+}
+
+#chat-log .bot {
+    background-color: var(--light-gray);
+    align-self: flex-start;
+    text-align: left;
+}
