@@ -23,10 +23,30 @@ const sendBtn = document.getElementById("send-btn");
 const userInput = document.getElementById("user-input");
 const chatLog = document.getElementById("chat-log");
 
+function addMessage(text, type) {
+  const msg = document.createElement("div");
+  msg.textContent = text;
+  msg.classList.add(type);
+  chatLog.appendChild(msg);
+  chatLog.scrollTop = chatLog.scrollHeight; // Auto-scroll
+}
+
+
 if (sendBtn) {
   sendBtn.addEventListener("click", () => {
     const input = userInput.value.trim();
     if (!input) return;
+
+    addMessage("You: " + input, "user");
+
+    // Simulated bot response with delay
+    setTimeout(() => {
+      addMessage("Bot: Hi recruiter! I can guide you through Amo’s portfolio highlights.", "bot");
+    }, 500);
+
+    userInput.value = "";
+  });
+}
 
     // Display user message
     const userMsg = document.createElement("div");
