@@ -63,3 +63,10 @@ if (sendBtn) {
     chatLog.scrollTop = chatLog.scrollHeight; // Auto-scroll
   });
 }
+// Allow Enter key to send message
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    sendBtn.click();
+  }
+});
+
