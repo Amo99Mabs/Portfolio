@@ -5,7 +5,7 @@ document.querySelectorAll(".navbar-right a").forEach((anchor) => {
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
-    });
+    }); 
   });
 });
 // Toggle button funtion //
