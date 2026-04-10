@@ -3,7 +3,7 @@ body {
     font-family: "Montserrat", serif;
     margin: 0;
     padding: 0;
-    background-color:#FAFAFA;
+    background-color:#FAFAFA; 
 }
 body.dark-mode {
     background-color: #424242; /* Charcoal Black */
