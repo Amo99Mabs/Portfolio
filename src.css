@@ -5,6 +5,10 @@ body {
     padding: 0;
     background-color:#FAFAFA; 
 }
+body, .navbar, .hero, .about, .skills, .contact, #chatbot {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body.dark-mode {
     background-color: #424242; /* Charcoal Black */
     color: #FAFAFA; /* Light Gray */
@@ -137,6 +141,23 @@ body.dark-mode .hero h1 {
 body.dark-mode .hero p.hero-bio {
     color: #FAFAFA; /* Light Gray */
 }
+.hero h1, .hero p.hero-bio, .hero img.hero-image {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero h1 { animation-delay: 0.2s; }
+.hero p.hero-bio { animation-delay: 0.4s; }
+.hero img.hero-image { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .connect-button {
     background-color: #424242; /* Charcoal Black */
     color: #FAFAFA; /* Light Gray */
