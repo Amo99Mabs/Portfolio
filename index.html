@@ -99,14 +99,32 @@
 <!-- Portfolio section -->
    <div class="portfolio" id="portfolio">
   <h1>Portfolio</h1>
+ 
+<div class="portfolio" id="portfolio">
+  <h1>Portfolio</h1>
+
+  <!-- Filter buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('react')">React</button>
+    <button onclick="filterProjects('node')">Node.js</button>
+    <button onclick="filterProjects('python')">Python</button>
+  </div>
+
   <div class="portfolio-container">
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="react">
       <img src="assets/project1.png" alt="Project 1 screenshot">
-      <h2>Project Title</h2>
-      <p>Short description of the project.</p>
+      <h2>React Dashboard</h2>
+      <p>Interactive recruiter-friendly dashboard project.</p>
       <a href="https://github.com/Amo99Mabs/project1" target="_blank">View on GitHub</a>
     </div>
-    <!-- Add more cards here -->
+
+    <div class="portfolio-card" data-category="node">
+      <img src="assets/project2.png" alt="Project 2 screenshot">
+      <h2>Node.js API</h2>
+      <p>RESTful API with MongoDB backend.</p>
+      <a href="https://github.com/Amo99Mabs/project2" target="_blank">View on GitHub</a>
+    </div>
   </div>
 </div>
 
