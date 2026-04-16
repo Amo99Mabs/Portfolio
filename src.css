@@ -545,3 +545,22 @@ body.dark-mode #send-btn:hover {
     align-self: flex-start;
     text-align: left;
 }
+@media (max-width: 768px) {
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    background: var(--light-purple);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+
+  .toggle-icon {
+    display: block;
+  }
+}
