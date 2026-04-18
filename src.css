@@ -1,5 +1,26 @@
 /*General style */
 body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#FAFAFA; 
+}
+body, .navbar, .hero, .about, .skills, .contact, #chatbot {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #424242; /* Charcoal Black */
+    color: #FAFAFA; /* Light Gray */
+}
+/* Defined color variables */
+:root {
+    --white: #FAFAFA;
+    --light-purple: #EDE7F6;
+    --charcoal-black: #424242;
+    --light-gray: #BDBDBD;
+    /*General style */
+body {
     font-family: "Montserrat", serif;
     margin: 0;
     padding: 0;
@@ -19,6 +40,551 @@ body.dark-mode {
     --light-purple: #EDE7F6;
     --charcoal-black: #424242;
     --light-gray: #BDBDBD;
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #EDE7F6; /* Light Purple */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+body.dark-mode .navbar {
+    background-color: #333333; /* Dark Gray */
+}
+
+.navbar-left .navbar-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #424242; /* Charcoal Black */
+    text-decoration: none;
+}
+body.dark-mode .navbar-left .navbar-name {
+    color: #FAFAFA; /* Light Gray */
+}
+.navbar-left .navbar-name:hover {
+    color: #BDBDBD; /* Light Gray */
+}
+
+/* Centered toggle icon */
+.navbar-right {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.toggle-icon {
+    cursor: pointer;
+      color: #424242;
+}
+/* Dark mode for toggle icon */
+body.dark-mode .toggle-icon {
+    color: #FAFAFA; 
+}
+.navbar-left {
+    flex: 1;
+}
+
+.navbar-right a {
+    color: #424242; /* Charcoal Black */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+body.dark-mode .navbar-right a {
+    color: #FAFAFA; /* Light Gray */
+    }
+
+.navbar-right a:hover {
+    background-color: #BDBDBD; /* Light Gray */
+    color: #424242; /* Charcoal Black */
+}
+body.dark-mode .navbar-right .material-icons {
+    color: #FAFAFA; /* Light Gray */
+}
+
+
+/*Added some padding to the body for the content to still be visible under the fixed navbar*/
+body {
+    padding-top: 50px; /* Adjust this value if your navbar height changes */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #FAFAFA; /* Light Purple */
+    text-align: center;
+    padding: 20px 50px 20px;
+    margin-top: 10px; /* Adjust to ensure it doesn't overlap with the navbar */
+    margin-bottom: 40px;
+    position: relative;
+}
+body.dark-mode .hero {
+    background-color: #333333; /* Dark Gray */}
+
+
+.hero h1 {
+    font-size: 50px;
+    color: #424242; /* Charcoal Black */
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+body.dark-mode .hero h1 {
+    color: #FAFAFA; /* Light Gray */}
+
+    .hero img.hero-image {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+ .hero .moon-crescent-hero {
+            width: 170px;
+            height: 170px;
+            background-color: var(--light-purple);
+            border-radius: 50%;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: -1;
+        }
+
+.hero p.hero-bio {
+    font-size: 18px;
+    color: #424242; /* Charcoal Black */
+    line-height: 1.6;
+}
+body.dark-mode .hero p.hero-bio {
+    color: #FAFAFA; /* Light Gray */
+}
+.hero h1, .hero p.hero-bio, .hero img.hero-image {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero h1 { animation-delay: 0.2s; }
+.hero p.hero-bio { animation-delay: 0.4s; }
+.hero img.hero-image { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-card {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.connect-button {
+    background-color: #424242; /* Charcoal Black */
+    color: #FAFAFA; /* Light Gray */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.connect-button:hover {
+    background-color: #BDBDBD; /* Light Gray */
+    color: #424242; /* Charcoal Black */
+}
+body.dark-mode .connect-button {
+    background-color: #FAFAFA; /* Light Gray */
+    color: #424242; /* Charcoal Black */}
+    body.dark-mode .connect-button:hover {
+    background-color: #BDBDBD; /* Light Gray */
+    color: #FAFAFA; /* Light Gray */}
+
+.about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: var(--light-purple);
+            text-align: left;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .about img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-right: 80px;
+        }
+         .about .moon-crescent-about {
+            width: 340px;
+            height: 340px;
+            background-color: var(--light-purple);
+            border-radius: 50%;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            z-index: -1;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+
+        .about p {
+            font-size: 1.2em;
+        }
+        /*
+     .about {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 50px;
+            background-color: var(--light-purple);
+        }
+        
+        .about h1 {
+            text-align: top;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .about img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        
+         .about-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+            */
+            /* Skills Section */
+.skills {
+    padding: 50px;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.skills h1 {
+    font-size: 2em;
+    color: var(--charcoal-black);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-category {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 50px;
+    width: 250px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h2 {
+    font-size: 1.5em;
+    color: var(--charcoal-black);
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category li {
+    font-size: 1.2em;
+    color: var(--charcoal-black);
+    margin: 5px 0;
+}
+
+/* Dark Mode for Skills Section */
+body.dark-mode .skills {
+    background-color: var(--charcoal-black);
+}
+
+body.dark-mode .skills h1 {
+    color: var(--white);
+}
+
+body.dark-mode .skill-category {
+    background-color: var(--light-purple);
+}
+
+body.dark-mode .skill-category h2 {
+    color: var(--white);
+}
+
+body.dark-mode .skill-category li {
+    color: var(--white);
+}
+
+         .portfolio, {
+            padding: 100px;
+            background-color: var(--white);
+        }
+
+        .portfolio h1, .contact h1 {
+            font-size: 2em;
+        }
+
+        .portfolio p, .contact p {
+            font-size: 1.2em;
+        }
+
+        .portfolio p, .contact p {
+            margin-bottom: 20px;
+        }
+
+        .dark-mode {
+            background-color: var(--charcoal-black);
+            color: var(--white);
+        }
+         .dark-mode .moon-crescent-hero {
+            background-color: var(--dark-gray);
+        }
+
+        .dark-mode .moon-crescent-about {
+            background-color: var(--dark-purple);
+        }
+        /* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: var(--light-purple);
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px; /* Adjust max-width as needed */
+    position: relative;
+}
+
+.contact h1 {
+    font-size: 2em;
+    color: var(--charcoal-black);
+    margin-bottom: 20px;
+}
+.contact-icons {
+    display: flex;
+    justify-content: space-between; /* Distribute icons evenly */
+    gap: 20px; /* Add some space between the icons */
+    position: absolute; /* Position the icons at the bottom */
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the icons horizontally */
+}
+
+.contact-icons a {
+    background-color: var(--charcoal-black);
+    color: var(--white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.contact-icons a:hover {
+    background-color: var(--light-gray);
+    color: var(--charcoal-black);
+}
+
+
+
+.contact i {
+    margin: auto;
+    font-size: 1.2em;
+    color: var(--white);
+}
+
+.contact a {
+    color: var(--charcoal-black);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--light-gray);
+}
+
+/* Dark Mode for Contact Section */
+body.dark-mode .contact {
+    background-color: var(--charcoal-black);
+}
+
+body.dark-mode .contact h1 {
+    color: var(--white);
+}
+
+body.dark-mode .contact-icons a {
+    background-color: var(--white);
+    color: var(--charcoal-black);
+}
+
+body.dark-mode .contact-icons a:hover {
+    background-color: var(--light-purple);
+    color: var(--white);
+}
+/* Chatbot Section */
+#chatbot {
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#chatbot h2 {
+    font-size: 1.8em;
+    color: var(--charcoal-black);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-log {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--light-gray);
+    padding: 10px;
+    margin-bottom: 10px;
+    background: var(--white);
+    border-radius: 5px;
+}
+
+#user-input {
+    width: 75%;
+    padding: 8px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#send-btn {
+    width: 20%;
+    padding: 8px;
+    background: var(--charcoal-black);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+body.dark-mode #chatbot {
+    background-color: var(--charcoal-black);
+    color: var(--white);
+}
+
+body.dark-mode #chatbot h2 {
+    color: var(--white);
+}
+
+body.dark-mode #chat-log {
+    background: var(--light-purple);
+    color: var(--charcoal-black);
+}
+
+body.dark-mode #user-input {
+    background: var(--white);
+    color: var(--charcoal-black);
+}
+
+body.dark-mode #send-btn {
+    background: var(--white);
+    color: var(--charcoal-black);
+}
+
+body.dark-mode #send-btn:hover {
+    background: var(--light-purple);
+    color: var(--white);
+}
+
+
+#send-btn:hover {
+    background: var(--light-gray);
+    color: var(--charcoal-black);
+}
+#chat-log div {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+#chat-log .user {
+    background-color: var(--light-purple);
+    align-self: flex-end;
+    text-align: right;
+}
+
+#chat-log .bot {
+    background-color: var(--light-gray);
+    align-self: flex-start;
+    text-align: left;
+}
+@media (max-width: 768px) {
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    background: var(--light-purple);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+
+  .toggle-icon {
+    display: block;
+  }
+}
 }
 /* Navigation Bar */
 .navbar {
