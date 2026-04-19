@@ -8,7 +8,7 @@ body {
 body, .navbar, .hero, .about, .skills, .contact, #chatbot {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+ 
 body.dark-mode {
     background-color: #424242; /* Charcoal Black */
     color: #FAFAFA; /* Light Gray */
