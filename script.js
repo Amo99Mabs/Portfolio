@@ -1,3 +1,11 @@
+// Mobile navbar toggle
+const navLinks = document.querySelector(".navbar-right");
+const toggleIcon = document.getElementById("theme-toggle");
+
+toggleIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
 // Smooth scrolling for navbar links
 document.querySelectorAll(".navbar-right a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
