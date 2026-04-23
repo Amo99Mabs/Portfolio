@@ -47,6 +47,13 @@ if (sendBtn) {
 
     addMessage("You: " + input, "user");
 
+     // Typing indicator
+    const typingMsg = document.createElement("div");
+    typingMsg.textContent = "Bot is typing...";
+    typingMsg.classList.add("bot");
+    typingMsg.id = "typing";
+    chatLog.appendChild(typingMsg);
+
     // Simulated bot response with delay
     setTimeout(() => {
       addMessage("Bot: Hi recruiter! I can guide you through Amo’s portfolio highlights.", "bot");
@@ -55,6 +62,12 @@ if (sendBtn) {
     userInput.value = "";
   });
 }
+// Allow Enter key to send message
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    sendBtn.click();
+  }
+});
 
     // Display user message
     const userMsg = document.createElement("div");
