@@ -56,8 +56,9 @@ if (sendBtn) {
 
     // Simulated bot response with delay
     setTimeout(() => {
+       document.getElementById("typing").remove();
       addMessage("Bot: Hi recruiter! I can guide you through Amo’s portfolio highlights.", "bot");
-    }, 500);
+    }, 1000);
 
     userInput.value = "";
   });
