@@ -8,7 +8,7 @@ toggleIcon.addEventListener("click", () => {
 
 // Smooth scrolling for navbar links
 document.querySelectorAll(".navbar-right a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function (e) { 
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
