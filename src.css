@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color:#FAFAFA; 
 }
-body, .navbar, .hero, .about, .skills, .contact, #chatbot {
+body, .navbar, .hero, .about, .skills, .contact, #chatbot { 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
  
