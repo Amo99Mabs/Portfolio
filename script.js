@@ -7,7 +7,7 @@ toggleIcon.addEventListener("click", () => {
 });
 
 // Smooth scrolling for navbar links
-document.querySelectorAll(".navbar-right a").forEach((anchor) => {
+document.querySelectorAll(".navbar-right a").forEach((anchor) => { 
   anchor.addEventListener("click", function (e) { 
     e.preventDefault();
 
