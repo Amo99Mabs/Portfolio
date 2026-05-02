@@ -34,7 +34,7 @@ body.dark-mode {
     z-index: 1000;
 }
 
-body.dark-mode .navbar { background-color: var(--dark-gray);
+body.dark-mode .navbar { background-color: var(--dark-gray); 
     
 }
 .navbar-left .navbar-name {
