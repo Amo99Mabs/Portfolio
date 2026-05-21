@@ -6,7 +6,7 @@ menuIcon.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Dark mode toggle
+// Dark mode toggle 
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
