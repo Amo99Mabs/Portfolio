@@ -2,20 +2,23 @@
 const navLinks = document.querySelector(".navbar-right");
 const menuIcon = document.getElementById("menu-toggle");
 
+if (menuIcon && navLinks) {
 menuIcon.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-});
-
+ });
+}
 // Dark mode toggle 
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
+if (toggleButton) {
 toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode")
     ? "brightness_high"
     : "brightness_4";
-});
+ });
+}
 
 // Smooth scrolling for navbar links
 document.querySelectorAll(".navbar-right a").forEach((anchor) => { 
@@ -69,5 +72,5 @@ userInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     sendBtn.click();
   }
-});
+ });
 }
