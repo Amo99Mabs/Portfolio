@@ -12,7 +12,7 @@
    <!-- Google icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -50,7 +50,7 @@
 
         toggleButton.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            toggleButton.textContent = body.classList.contains('dark-mode') ? 'brightness_high' : 'brightness_4';
+          toggleButton.innerText = body.classList.contains('dark-mode') ? 'brightness_high' : 'brightness_4';  
         });
     </script>
 
@@ -65,6 +65,7 @@
         </div>
     </div>
     <!-- Skills Section -->
+<div class="skills" id="skills">
 <div class="skills">
     <h1>Skills</h1>
     <div class="skills-container">
@@ -123,8 +124,7 @@
 </div>
 
         <!-- Add your project details here -->
-    </div>
-    <div id="chatbot">
+<div id="chatbot">
   <h2>Ask My AI Assistant</h2>
   <div id="chat-container">
     <div id="chat-log"></div>
@@ -139,7 +139,7 @@
 <div class="contact">
     <h1>Contact</h1>
     <div class="contact-icons">
-        <a href="mailto:mabonelaa@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:mabonelaa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/amogelang-mabonela" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/Amo99Mabs" target="_blank"><i class="fab fa-github"></i></a>
         <a href="tel:+27604168227"><i class="fas fa-phone"></i></a>
