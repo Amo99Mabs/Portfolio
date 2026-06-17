@@ -46,6 +46,19 @@ body.dark-mode .navbar { background-color: var(--dark-gray);
 body.dark-mode .navbar-left .navbar-name { color: var(--white); 
    
 }
+.navbar-right a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--charcoal-black);
+  font-weight: 500;
+}
+.navbar-right a:hover {
+  color: var(--dark-purple);
+}
+body.dark-mode .navbar-right a:hover {
+  color: var(--light-purple);
+}
+
 /* Hero Section */
 .hero {
     background-color: var(--white);
@@ -62,20 +75,17 @@ body.dark-mode .hero { background-color: var(--dark-gray); }
     margin: 0 0 20px;
 }  
 body.dark-mode .hero { background-color: var(--dark-gray); }
-.hero h1 {
-    font-size: 50px;
-    color: var(--charcoal-black);
-    margin: 0 0 20px;
-}
+
 body.dark-mode .hero h1 { color: var(--white); }
 
 .hero img.hero-image {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 20px;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
 }
+
 
 /* Portfolio Section */
 .portfolio {
@@ -115,6 +125,14 @@ body.dark-mode .portfolio { background-color: var(--charcoal-black); }
     align-self: flex-start;
     text-align: left;
 }
+#chat-log .user, #chat-log .bot {
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 8px;
+  max-width: 70%;
+  display: inline-block;
+}
+
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
