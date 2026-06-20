@@ -21,7 +21,12 @@ body.dark-mode {
   --icon-dark-mode: #bbb;
   --section-spacing: 50px;
 }
-/* Navigation Bar */
+ 
+body.dark-mode {
+    background-color: var(--charcoal-black);
+    color: var(--white);
+}
+/*Navbar*/
 .navbar {
   background-color: #ede7f6;
   overflow: hidden;
@@ -39,18 +44,10 @@ body.dark-mode .navbar {
   background-color: #333333;
 }
 
+body.dark-mode .navbar { background-color: var(--dark-gray); 
+    
+}
 .navbar-left .navbar-name {
-  font-weight: bold;
-  font-size: 18px;
-  color: #424242;
-  text-decoration: none;
-}
-body.dark-mode .navbar-left .navbar-name {
-  color: #fafafa;
-}
-.navbar-left .navbar-name:hover {
-  color: #bdbdbd;
-}
 
 /* Centered toggle icon */
 .navbar-right {

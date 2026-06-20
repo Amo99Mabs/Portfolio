@@ -1,16 +1,36 @@
+// Mobile navbar toggle
+const navLinks = document.querySelector(".navbar-right");
+const menuIcon = document.getElementById("menu-toggle");
+
+if (menuIcon && navLinks) {
+  menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
+// Dark mode toggle
+const toggleButton = document.getElementById("theme-toggle");
+const body = document.body;
+
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    toggleButton.innerText = body.classList.contains("dark-mode")
+      ? "brightness_high"
+      : "brightness_4";
+  });
+}
+
 // Smooth scrolling for navbar links
 document.querySelectorAll(".navbar-right a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
-// Toggle button funtion //
-const toggleButton = document.getElementById("theme-toggle");
-const body = document.body;
 
 toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
