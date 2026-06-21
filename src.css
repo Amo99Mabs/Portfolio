@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #fafafa;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 body.dark-mode {
   background-color: #424242;
