@@ -6,7 +6,7 @@ body {
   background-color: #fafafa;
   width: 100%;
   overflow-x: hidden; 
-}
+} 
 body.dark-mode {
   background-color: #424242;
   color: #fafafa;
