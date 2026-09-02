@@ -44,11 +44,12 @@ body.dark-mode .navbar {
   background-color: #333333;
 }
 
-body.dark-mode .navbar { background-color: var(--dark-gray); 
-    
-}
 .navbar-left .navbar-name {
-
+font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #424242;
+}
 /* Centered toggle icon */
 .navbar-right {
   display: flex;
