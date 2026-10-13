@@ -44,8 +44,7 @@ body.dark-mode .navbar {
   background-color: #333333;
 }
 
-body.dark-mode .navbar { background-color: var(--dark-gray); 
-    
+body.dark-mode .navbar { background-color: var(--dark-gray);
 }
 .navbar-left .navbar-name {
 
@@ -56,8 +55,9 @@ body.dark-mode .navbar { background-color: var(--dark-gray);
   flex: 1;
 }
 .toggle-icon {
-  cursor: pointer;
-  color: #424242;
+  cursor: pointer !important;
+  color: red;
+  font-size: 30px;
 }
 /* Dark mode for toggle icon */
 body.dark-mode .toggle-icon {

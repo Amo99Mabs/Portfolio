@@ -8,7 +8,7 @@ if (menuIcon && navLinks) {
   });
 }
 
-// Dark mode toggle
+// Dark mode toggle 
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -100,3 +100,19 @@ if (sendBtn) {
     chatboxBody.scrollTop = chatboxBody.scrollHeight;
   });
 }
+
+// Show typing indicator
+const typingMsg = document.createElement("div");
+typingMsg.textContent = "Bot is typing...";
+typingMsg.classList.add("bot");
+chatboxBody.appendChild(typingMsg);
+
+// Delay bot reply
+setTimeout(() => {
+  typingMsg.remove(); // remove typing indicator
+  const botMsg = document.createElement("div");
+  botMsg.textContent = reply;
+  botMsg.classList.add("bot");
+  chatboxBody.appendChild(botMsg);
+  chatboxBody.scrollTop = chatboxBody.scrollHeight;
+}, 1000); // 1 second delay
