@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #fafafa;
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 body.dark-mode {
   background-color: #424242;
@@ -21,10 +21,10 @@ body.dark-mode {
   --icon-dark-mode: #bbb;
   --section-spacing: 50px;
 }
- 
+
 body.dark-mode {
-    background-color: var(--charcoal-black);
-    color: var(--white);
+  background-color: var(--charcoal-black);
+  color: var(--white);
 }
 /*Navbar*/
 .navbar {
@@ -44,10 +44,15 @@ body.dark-mode .navbar {
   background-color: #333333;
 }
 
-body.dark-mode .navbar { background-color: var(--dark-gray);
+body.dark-mode .navbar {
+  background-color: var(--dark-gray);
 }
 .navbar-left .navbar-name {
-
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #424242;
+}
 /* Centered toggle icon */
 .navbar-right {
   display: flex;
