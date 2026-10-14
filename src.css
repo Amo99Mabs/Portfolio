@@ -16,6 +16,7 @@ body.dark-mode {
   --white: #fafafa;
   --light-purple: #ede7f6;
   --charcoal-black: #424242;
+  --dark-gray: #333333;
   --light-gray: #bdbdbd;
   --hover-dark-mode: #555;
   --icon-dark-mode: #bbb;
@@ -24,7 +25,7 @@ body.dark-mode {
 
 body.dark-mode {
   background-color: var(--charcoal-black);
-  color: var(--white);
+  color: #7c3aed;
 }
 /*Navbar*/
 .navbar {
@@ -39,6 +40,42 @@ body.dark-mode {
   align-items: center;
   padding: 10px 10px;
   z-index: 1000;
+}
+/* Dark Mode Navbar Colors */
+
+body.dark-mode .nav-home {
+  color: #a855f7;
+}
+
+body.dark-mode .nav-about {
+  color: #c084fc;
+}
+
+body.dark-mode .nav-skills {
+  color: #d946ef;
+}
+
+body.dark-mode .nav-projects {
+  color: #fb923c;
+}
+
+body.dark-mode .nav-contact {
+  color: #f97316;
+}
+
+body.dark-mode .navbar-right a:hover {
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+  opacity: 0.8;
+}
+
+body.dark-mode .navbar-name {
+  color: #a855f7;
+}
+
+body.dark-mode .navbar-name:hover {
+  color: #f97316;
+  transition: 0.3s ease;
 }
 body.dark-mode .navbar {
   background-color: #333333;
@@ -61,8 +98,7 @@ body.dark-mode .navbar {
 }
 .toggle-icon {
   cursor: pointer !important;
-  color: red;
-  font-size: 30px;
+  color: #424242;
 }
 /* Dark mode for toggle icon */
 body.dark-mode .toggle-icon {
@@ -194,7 +230,7 @@ body.dark-mode .connect-button:hover {
 .about h1 {
   font-size: 3em;
   color: var(--charcoal-black);
-  margin-bottom: 20px 0;
+  margin: 20px 0;
 }
 .about-content {
   display: flex;
@@ -222,7 +258,9 @@ body.dark-mode .connect-button:hover {
 body.dark-mode .about {
   background-color: var(--charcoal-black);
 }
-
+body.dark-mode .about h1 {
+  color: #f97316;
+}
 body.dark-mode .about-text {
   color: var(--white);
 }
@@ -306,6 +344,8 @@ body.dark-mode .skill-category li {
 .portfolio h1 {
   font-size: 3em;
   color: var(--charcoal-black);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .portfolio p,
@@ -338,12 +378,9 @@ body.dark-mode .skill-category li {
 }
 
 /* Dark mode for portfolio section */
-dark-mode {
-  background-color: var(--charcoal-black);
-  color: var(--light-gray);
-}
+
 body.dark-mode .portfolio h1 {
-  color: var(--dark-gray);
+  color: #7c3aed;
 }
 
 /* Contact Section */
@@ -408,12 +445,19 @@ body.dark-mode .portfolio h1 {
 }
 
 /* Dark Mode for Contact Section */
+
 body.dark-mode .contact {
   background-color: var(--charcoal-black);
 }
-
-body.dark-mode .contact h1 {
+body.dark-mode .contact p {
   color: var(--white);
+}
+
+body.dark-mode .contact a {
+  color: var(--white);
+}
+body.dark-mode .contact h1 {
+  color: #f97316;
 }
 
 body.dark-mode .contact-icons a {
@@ -426,7 +470,7 @@ body.dark-mode .contact-icons a:hover {
   color: var(--white);
 }
 body.dark-mode .contact-icons i {
-  color: var(--icon-dark-mode);
+  color: var(--charcoal-black);
 }
 
 /* Chatbot floating button */

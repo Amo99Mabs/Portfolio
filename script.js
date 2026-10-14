@@ -32,13 +32,6 @@ document.querySelectorAll(".navbar-right a").forEach((anchor) => {
   });
 });
 
-toggleButton.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  toggleButton.textContent = body.classList.contains("dark-mode")
-    ? "brightness_high"
-    : "brightness_4";
-});
-
 // --------------------
 // Chatbot functionality
 // --------------------
@@ -53,11 +46,11 @@ const botResponses = {
   hello:
     "Hi! I’m Amo, an AI Engineer with hands-on experience in JavaScript, React, Node.js, and MongoDB.",
   skills:
-    "My core skills include JavaScript, Python, React, Node.js and MongoDB.",
+    "My core skills include JavaScript, Python, React, Node.js, MongoDB, and Salesforce CRM.",
   portfolio:
     "You can explore my projects like Agenda (a to-do list app) and more in the Portfolio section.",
   contact:
-    "You can reach me at mabonelaa@gmail.com or on LinkedIn: linkedin.com/in/amogelangmabonela or call/WhatsApp me on: 071 670 1133.",
+    "You can reach me at mabonelaa@gmail.com or on LinkedIn: linkedin.com/in/amogelangmabonela.",
 };
 
 if (chatbotButton) {
