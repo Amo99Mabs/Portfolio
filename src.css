@@ -41,32 +41,35 @@ body.dark-mode {
   padding: 10px 10px;
   z-index: 1000;
 }
+.hero,
+.about,
+.skills,
+.portfolio,
+.contact {
+  margin: 0;
+}
+section {
+  scroll-margin-top: 80px;
+}
 /* Dark Mode Navbar Colors */
-
-body.dark-mode .nav-home {
+body.dark-mode .navbar-right .nav-home {
   color: #a855f7;
 }
 
-body.dark-mode .nav-about {
+body.dark-mode .navbar-right .nav-about {
   color: #c084fc;
 }
 
-body.dark-mode .nav-skills {
+body.dark-mode .navbar-right .nav-skills {
   color: #d946ef;
 }
 
-body.dark-mode .nav-projects {
+body.dark-mode .navbar-right .nav-portfolio {
   color: #fb923c;
 }
 
-body.dark-mode .nav-contact {
+body.dark-mode .navbar-right .nav-contact {
   color: #f97316;
-}
-
-body.dark-mode .navbar-right a:hover {
-  transform: translateY(-2px);
-  transition: 0.3s ease;
-  opacity: 0.8;
 }
 
 body.dark-mode .navbar-name {
@@ -114,9 +117,6 @@ body.dark-mode .toggle-icon {
   padding: 14px 16px;
   text-decoration: none;
 }
-body.dark-mode .navbar-right a {
-  color: #fafafa;
-}
 
 .navbar-right a:hover {
   background-color: #bdbdbd;
@@ -138,7 +138,6 @@ body {
   padding: 20px 50px 20px;
   margin-top: 10px;
   margin-bottom: 40px;
-  margin-top: var(--section-spacing);
   position: relative;
 }
 body.dark-mode .hero {
@@ -225,12 +224,11 @@ body.dark-mode .connect-button:hover {
   background-color: var(--light-purple);
   text-align: center;
   position: relative;
-  margin-top: var(--section-spacing);
 }
 .about h1 {
   font-size: 3em;
   color: var(--charcoal-black);
-  margin: 20px 0;
+  margin: 40px 0;
 }
 .about-content {
   display: flex;
@@ -273,7 +271,6 @@ body.dark-mode .about p {
   padding: 50px;
   background-color: var(--light-gray);
   text-align: center;
-  margin-top: var(--section-spacing);
 }
 
 .skills h1 {
@@ -389,7 +386,6 @@ body.dark-mode .portfolio h1 {
   background-color: var(--light-purple);
   text-align: center;
   border-radius: 0px;
-  margin: var(--section-spacing) auto;
   max-width: 100%;
   position: relative;
   order: 1;
@@ -432,7 +428,7 @@ body.dark-mode .portfolio h1 {
 .contact i {
   margin: auto;
   font-size: 1.2em;
-  color: var(--white);
+  color: #7c3aed;
 }
 
 .contact a {
