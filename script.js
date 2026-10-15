@@ -8,7 +8,7 @@ if (menuIcon && navLinks) {
   });
 }
 
-// Dark mode toggle 
+// Dark mode toggle
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -44,13 +44,20 @@ const chatboxBody = document.getElementById("chatbox-body");
 //Chatbot info about me
 const botResponses = {
   hello:
-    "Hi! I’m Amo, an AI Engineer with hands-on experience in JavaScript, React, Node.js, and MongoDB.",
+    "Hi! 👋 I'm Amza an AI assistant. Ask me about my skills, projects, experience, location, resume or contact details.",
   skills:
-    "My core skills include JavaScript, Python, React, Node.js, MongoDB, and Salesforce CRM.",
+    "My core skills include JavaScript, Python, React, Node.js, MongoDB, Salesforce, HubSpot, HTML and CSS.",
   portfolio:
-    "You can explore my projects like Agenda (a to-do list app) and more in the Portfolio section.",
+    "Take a look at my portfolio section to see projects including Agenda Task Manager and my AI Engineer portfolio.",
+  projects:
+    "My featured projects include Agenda Task Manager and this AI Portfolio Website.",
+
   contact:
-    "You can reach me at mabonelaa@gmail.com or on LinkedIn: linkedin.com/in/amogelangmabonela.",
+    "You can reach me via email, phone or LinkedIn in the Contact section.",
+  experience:
+    "I have experience in software development, customer service, executive support, appointment setting and CRM systems.",
+  location: "I am based in South Africa.",
+  resume: "You can download my CV directly from my portfolio.",
 };
 
 if (chatbotButton) {
@@ -83,6 +90,10 @@ if (sendBtn) {
     else if (input.includes("skill")) reply = botResponses.skills;
     else if (input.includes("portfolio")) reply = botResponses.portfolio;
     else if (input.includes("contact")) reply = botResponses.contact;
+    else if (input.includes("experience")) reply = botResponses.experience;
+    else if (input.includes("location")) reply = botResponses.location;
+    else if (input.includes("resume")) reply = botResponses.resume;
+    else if (input.includes("project")) reply = botResponses.projects;
 
     const botMsg = document.createElement("div");
     botMsg.textContent = reply;
@@ -94,18 +105,13 @@ if (sendBtn) {
   });
 }
 
-// Show typing indicator
-const typingMsg = document.createElement("div");
-typingMsg.textContent = "Bot is typing...";
-typingMsg.classList.add("bot");
-chatboxBody.appendChild(typingMsg);
+window.addEventListener("load", () => {
+  const welcomeMsg = document.createElement("div");
 
-// Delay bot reply
-setTimeout(() => {
-  typingMsg.remove(); // remove typing indicator
-  const botMsg = document.createElement("div");
-  botMsg.textContent = reply;
-  botMsg.classList.add("bot");
-  chatboxBody.appendChild(botMsg);
-  chatboxBody.scrollTop = chatboxBody.scrollHeight;
-}, 1000); // 1 second delay
+  welcomeMsg.classList.add("bot");
+
+  welcomeMsg.textContent =
+    "Hi! 👋 I'm AmoBot. Ask me about my skills, projects, experience, location, or contact details.";
+
+  chatboxBody.appendChild(welcomeMsg);
+});
